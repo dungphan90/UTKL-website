@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+  <title>UTKL Research Group</title>
+  <!--REQUIRED STYLE SHEETS-->
+  <!-- BOOTSTRAP CORE STYLE CSS -->
+  <link href="assets/flags/css/flag-icon.css" rel="stylesheet" />
+  <!-- BOOTSTRAP CORE STYLE CSS -->
+  <link href="assets/css/nuosc_bootstrap.css" rel="stylesheet" />
+  <!-- FONTAWESOME STYLE CSS -->
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <!-- VEGAS STYLE CSS -->
+  <link href="assets/plugins/vegas/jquery.vegas.min.css" rel="stylesheet" />
+  <!-- CUSTOM STYLE CSS -->
+  <link href="assets/css/nuosc_style.css" rel="stylesheet" />
+  <!-- GOOGLE FONT -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #drop-cap::first-letter {
+        float: left;
+        font-size: 85px;
+        line-height: 1;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+        margin-right: 9px;
+      }
+    </style>
+
+  <!-- Adding MathJax to show mathematical formula -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });
+  </script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- CHECK ELEMENT IN VIEWPORT OR NOR SCRIPT -->
+  <!--- Dungy's script (bug: previous button's state is not changed when scroll down) -->
+  <script>
+  var sectionIDs = ["#nemo_intro", "#nemo-3", "#supernemo","#publication"];
+  var navbarItemIDs = ["#navbar-nav-item-nemo_intro", "#navbar-nav-item-nemo-3", "#navbar-nav-item-supernemo", "#navbar-nav-item-publication"];
+  var list = [];
+  var previousHighlightedID = -1;
+  var currentHighlightedID = -1;
+  setInterval(function() {
+    for (i = 0; i < sectionIDs.length; i++) {
+      if ($(sectionIDs[i]).isOnScreen(
+        function(deltas){
+          return deltas.top >= 400 && deltas.bottom >= 400;
+        }
+      )) {
+        list.push(i);
+      }
+    }
+    if (list.length == 1) {
+      currentHighlightedID = list[0];
+    } else if (list.length == 2) {
+      currentHighlightedID = list[0];
+    } else {
+      currentHighlightedID = list[1];
+    }
+
+    for (i = 0; i < sectionIDs.length; i++) {
+      list.shift();
+    }
+
+    if (currentHighlightedID != previousHighlightedID) {
+      $(navbarItemIDs[currentHighlightedID]).addClass("navbar-nav-li-active", 100, "swing");
+      $(navbarItemIDs[previousHighlightedID]).removeClass("navbar-nav-li-active", 100, "swing");
+      previousHighlightedID = currentHighlightedID;
+    }
+  }, 100);
+  </script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar-inverse" role="navigation" style="position:fixed;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+      </div>
+      <!-- Collect the nav links for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li id="navbar-nav-item-home"><a href="index.html"><i class="fa fa-home" style="position:relative;font-size:130%;bottom:5px;width:80px;text-align:left;"></i></a>
+          </li>
+          <li id="navbar-nav-item-nemo_intro"><a href="#nemo_intro" style="font-weight:bold;">Intro</a>
+          </li>
+          <li id="navbar-nav-item-nemo-3"><a href="#nemo-3" style="font-weight:bold;">NEMO-3</a>
+          </li>
+          <li id="navbar-nav-item-supernemo"><a href="#supernemo" style="font-weight:bold;">SuperNEMO</a>
+          </li>
+          <li id="navbar-nav-item-publication"><a href="#publication" style="font-weight:bold;">Publications</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <!--End Navigation -->
+
+
+  <!-- DOUBLE BETA DECAY Section -->
+  <section class="for-full-back color-white" id="nemo_intro">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 style="font-weight:bold;">Neutrinoless Double Beta Decay</h1>
+          </br>
+          </br>
+          </br>
+          <h4 align="justify" style="padding-left:50px; padding-right:50px;">
+            The process of double beta decay involves two protons transforming into two neutrons at the same time (or viceversa) inside the nucleus of an atom. When this occurs, two beta particles (electrons or positrons) are emitted. So far, this process has been observed to always be accompanied by the emission of two neutrinos or two antineutrinos, but it is hypothesized that the double beta decay can occur without them. This is what is referred to as neutrinoless double beta decay. It has never been observed, but through various experiment it has been found that the lower limit for its half-life is ~\(10^{25}\) years.
+          </h4>
+          <h4 align="justify" style="padding-left:50px; padding-right:50px;">
+            In order to find evidence for these decays, very low background is required, as well as a substantial amount of radioactive sources which undergo regular double beta decay. If the elusive process is ever observed, it would make it possible to measure the effective mass ofneutrinos, and it would be the first report of lepton number ever being violated. The violation of lepton number leads to new physics which help explain why there is more matter than antimatter in the universe.
+          </h4>
+
+          <img id="nemo_fig_1" src="assets/img/researchPlots/nemo/frejus.png" style="max-height:600px;"/>
+          </br>
+          </br>
+          </br>
+          <h4 align="justify" style="padding-left:50px; padding-right:50px;">
+            The NEMO collaboration began studying double beta decay in the early 1990s through the development of two prototypes named NEMO-1 and NEMO-2. These prototypes eventually led to the construction of the NEMO-3 detector in the Laboratoire Souterrain de Modane (LSM), which is located inside a tunnel connecting the cities of Modane and Bardonecchia. The success of the NEMO-3 detector ultimately spurred the creation of SuperNEMO, a modern detector that, once commissioned, will continue the search for neutrinoless double beta decay in the LSM.
+          </h4>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End DOUBLE BETA DECAY Section -->
+
+  <!-- NEMO-3 Section -->
+  <section class="for-full-back color-dark" id="nemo-3">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 style="padding-left:50px; padding-right:50px; color:white;">NEMO-3</h1>
+          </br>
+          </br>
+          <h4 align="justify" style="padding-left:50px; padding-right:50px; color:white;">
+            NEMO-3 was a cylindrical detector which was radially divided into 20 sections. Each section was identical in size, but not all of them contained the same type of radioactive sources. In fact, NEMO-3 was very unique because it was studying 7 different sources of double beta decay at the same time. These sources were installed inside the sections in the form of thin vertical foils, and they totalled approximately 10 kg of double beta decay isotopes. The detector also had a tracking volume to completely reconstruct the topology of any charged particles passing through it. This was another great advantage of NEMO-3, as it helped significantly to distinguish double beta decays from any other possible events. The energy of the beta particles was measured using scintillator blocks coupled to 8 inch PMTs.
+          </h4>
+          <img id="nemo_fig_1" src="assets/img/researchPlots/nemo/nemo3.png" style="max-height:600px;"/>
+          </br>
+          </br>
+          </br>
+          <h4 align="justify" style="padding-left:50px; padding-right:50px; color:white;">
+            To keep the background as low as possible, the NEMO-3 detector was housed underneath a mountain. This reduced the amount of cosmic rays reaching it by a factor of a million. In addition, every piece of material used to construct NEMO-3 had to be carefully tested to make sure that it had very low radiation. Each test could last more than a month since the radiation emitted by the desired materials needed to be orders of magnitude less than that emitted by humans.
+          </h4>
+          <img id="nemo_fig_1" src="assets/img/researchPlots/nemo/sources.png" style="max-height:600px;"/>
+          </br>
+          </br>
+          </br>
+          <h4 align="justify" style="padding-left:50px; padding-right:50px; color:white;">
+            After 8 years of data taking (from 2003 to 2011), the results obtained were very successful. After a lot of analysis, the world’s most accurate measurements of the two-neutrino double beta decay half lives were calculated for each of the sources which were being studied, and the best limits were placed on most of them for the half-life of neutrinoless double beta decay. For more information on these results, see the section “Published Papers”.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End NEMO-3 Section -->
+
+  <!-- SuperNEMO Section -->
+  <section class="for-full-back color-white " id="supernemo">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 style="font-weight:bold;">SuperNEMO</h1>
+          </br>
+          </br>
+          <div class="col-md-12">
+            <h4 align="justify" style="padding-left:50px; padding-right:50px;">
+              The success of NEMO-3 motivated an effort to construct a new and better detector called SuperNEMO. It is designed to have larger amounts of double beta decay sources and to be made out of materials which are less radioactive than the ones used to build NEMO-3, further reducing the possible background. SuperNEMO will also be composed of 20 modules. Approximately 5-7 kg of double beta decay isotopes will be installed in each module, allowing it to have at least 10 times more source mass than its predecessor. The materials to build the modules were chosen so that, once built, each module will be less radioactive than 8 bananas.
+            </h4>
+          </div>
+
+          <img id="miner_sens_fig_1" src="assets/img/researchPlots/nemo/image4.png" style="max-height:600px;"/>
+
+          <div class="col-md-12">
+            <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+              In contrast to the cylindrical shape of the NEMO-3 detector, the SuperNEMO modules exhibit a rectangular geometry. This allows for a staged approach to the construction of the detector, meaning that a module can be taking data while the rest of the modules are being built. It also makes it possible to build this kind of modules in other underground locations if desired. Lastly, this geometry facilitates the extrapolation of sensitivity and performance from a single module to the whole SuperNEMO detector.
+            </h4>
+          </div>
+
+          <div class="col-md-12">
+            <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+              The first module, called the demonstrator, is currently under construction. It will be populated with \(^{82}\)Se as its only source of double beta decays. However, since virtually any double beta decay source may be used, the possibility of enriching and using \(^{150}\)Nd and \(^{48}\)Ca is being investigated. The SuperNEMO experiment is aiming to reach a sensitivity greater than \(10^{26}\) years for the half life of neutrinoless double beta decay, which translates to an effective neutrino mass of 50-100 meV.
+            </h4>
+          </div>
+
+          <div class="col-md-12">
+            <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+              Our group’s involvement with this experiment consists of two calibration systems: The Calibration Source Deployment System, and the Light Injection System. Information about each of them can be found in the following links:
+              <ul>
+                <li>Calibration Source Deployment System. <a href="https://pos.sissa.it/282/808/pdf">See more...</a></li>
+                <li>Light Injection System. <a href="http://iopscience.iop.org/article/10.1088/1742-6596/888/1/012080/pdf">See more...</a></li>
+              </ul>
+            </h4>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End SuperNEMO Section -->
+
+  <!-- Publications Section -->
+  <section class="for-full-back color-dark " id="publication">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-8 col-md-offset-2 ">
+          <h1 style="color:white;">Publications</h1>
+          <h4 style="color:white;">
+          <strong>
+            List of publications related to double beta decay research.
+          </strong>
+        </h4>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-12 g-pad-bottom" style="width:100%;">
+          <div class="col-md-3" style="width:100%;">
+            <ol class="plan">
+              <li class="plan-head">SuperNEMO Papers</li>
+              <!--<li class="main-price">$99 only</li>-->
+              <li><strong>Spectral modeling of scintillator for the NEMO-3 and SuperNEMO detectors</strong>, J. Argyriades et al. Nucl.Inst.Meth. A 625(1)</li>
+              <li><strong>Probing New Physics Models of Neutrinoless Double Beta Decay with SuperNEMO</strong>, R. Arnold et al.Eur.Phys.J.C70:927-943(2010).</li>
+              <li><strong>Results of the BiPo-1 prototype for radiopurity measurements for the SuperNEMO double beta decay source foils</strong>, J. Argyriades et al. Nucl. Inst. Meth. A 622 120-128 (2010).</li>
+              <li><strong>The SuperNEMO project</strong>, F. Piquemal Physics of Atomic Nuclei, Volume 69, Issue 12, pp.2096-2100.</li>
+              <li class="bottom" style="text-align:center;">
+                <a href="#" class="btn btn-primary">Download BiBTeX</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="col-md-12 g-pad-bottom" style="width:100%;">
+          <div class="col-md-3" style="width:100%;">
+            <ol class="plan">
+              <li class="plan-head">NEMO-3 Papers</li>
+              <li><strong>Measurement of the 2\(\nu\beta\beta\) decay half-life and search for the 0\(\nu\beta\beta\) decay of \(^{116}\)Cd with the NEMO-3 detector</strong>, R. Arnold et al. Phys. Rev. D 95, 012007.</li>
+              <li><strong>Measurement of the 2\(\nu\beta\beta\) decay half-life of \(^{150}\)Nd and a search for 0\(\nu\beta\beta\) decay processes with the full exposure from the NEMO-3 detector</strong>, R. Arnold et al. Phys. Rev. D 94, 072003.</li>
+              <li><strong>Measurement of the double-beta decay half-life and search for the neutrinoless double-beta decay of \(^{48}\)Ca with the NEMO-3 detector</strong>, R. Arnold et al. Phys. Rev. D 93, 112008.</li>
+              <li><strong>Results of the search for neutrinoless double-\(\beta\) decay in \(^{100}\)Mo with the NEMO-3 experiment</strong>, R. Arnold et al. Phys. Rev. D 92, 072011.</li>
+              <li><strong>Investigation of double beta decay of \(^{100}\)Mo to excited states of \(^{100}\)Ru</strong>, R. Arnold et al. Nucl. Phys. A 925 (2014) 25.</li>
+              <li><strong>Search for neutrinoless double-beta decay of \(^{100}\)Mo with the NEMO-3 detector</strong>, R. Arnold et al. Phys. Rev. D 89, 111101(R).</li>
+              <li><strong>Measurement of the \(\beta\beta\) Decay Half-Life of \(^{130}\)Te with the NEMO-3 Detector</strong>, R. Arnold et al. Phys. Rev. Lett. 107, 062504.</li>
+              <li><strong>Spectral modeling of scintillator for the NEMO-3 and SuperNEMO detectors</strong>, J. Argyriades et al. Nucl.Inst.Meth. A 625(1).</li>
+              <li><strong>Measurement of the two neutrino double beta decay half-life of Zr-96 with the NEMO-3 detector</strong>, J. Argyriades et al. Nucl.Phys.A847:168-179 (2010).</li>
+              <li><strong>Measurement of the Double Beta Decay Half-life of \(^{150}\)Nd and Search for Neutrinoless Decay Modes with the NEMO-3 Detector</strong>, J. Argyriades et al. Phys. Rev. C 80, 032501(R) (2009).</li>
+              <li><strong>Measurement of the background in the NEMO 3 double beta decay experiment</strong>, J. Argyriades et al. Nucl. Inst. Meth. A 606, Issue 3 (2009) 449-465.</li>
+              <li><strong>Measurement of double beta decay of \(^{100}\)Mo to excited states in the NEMO-3 experiment</strong>, R. Arnold et al.Nucl. Phys. A 781 (2007) 209-226.</li>
+              <li><strong>Limits on different Majoron decay modes of \(^{100}\)Mo and \(^{82}\)Se for neutrinoless double beta decays in the NEMO-3 experiment</strong>, R. Arnold et al. Nucl.Phys. A 765 (2006) 483-494</li>
+              <li><strong>First Results of the Search for Neutrinoless Double-Beta Decay with the NEMO-3 Detector</strong>, R. Arnold et al.Phys. Rev. Let. 95, 182302 (2005).</li>
+              <li><strong>Technical design and performance of the NEMO-3 detector</strong>, R. Arnold et al. Nucl. Inst. Meth. A536 (2005) 79-122.</li>
+              <li><strong>Possible background reductions in double beta decay experiments</strong>, R. Arnold et al. Nucl. Instrum. Meth. A503:649-657</li>
+              <li><strong>Chemical purification of molybdenum samples for the NEMO-3 experiment</strong>, R. Arnold et al. Nucl. Inst. Meth. A 474 (2001) 93</li>
+              <li class="bottom" style="text-align:center;">
+                <a href="#" class="btn btn-primary">Download BiBTeX</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--End Publications Section -->
+
+  <!--footer Section -->
+  <div class="for-full-back" id="footer" style="padding-bottom:10px;">
+    <p align="center"><a href="https://www.utexas.edu"><img src="assets/img/ut_logo.png" width="20%" style="margin-bottom:-20px;"></a></p>
+    <p style="color:#ed7900;font-size:120%;margin-bottom:-20px;" align="center">Copyright &copy; 2017 UTKL Research Group.</p>
+    <p style="color:#ffffff;font-size:80%;margin-bottom:-10px;" align="center">
+      This website is developed using <a href="http://getbootstrap.com/">bootstrap</a>, <a href="https://github.com/lipis/flag-icon-css">flag-icon-css</a>, <a href="http://fontawesome.io/">font-awesome</a> and <a href="http://www.dafont.com/geobats.font">geobats</a>.
+    </p>
+  </div>
+
+  <!--End footer Section -->
+  <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+  <!-- CORE JQUERY  -->
+  <script src="assets/plugins/jquery-1.10.2.js"></script>
+  <!-- BOOTSTRAP CORE SCRIPT   -->
+  <script src="assets/plugins/bootstrap.js"></script>
+  <!-- CUSTOM SCRIPTS -->
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
