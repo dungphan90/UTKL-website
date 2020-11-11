@@ -1179,6 +1179,79 @@
     </section>
     <!--End NOVA Introduction Section -->
 
+    <!-- NOVA Pion-Zero Cross-Section Measurement -->
+    <section class="for-full-back color-white " id="novaopsim">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="col-md-12">
+                    <h1 style="font-weight:bold;">NOvA Neutral Current Pion-Zero Production Measurement</h1>
+                </div>
+                </br>
+                </br>
+                </br>
+
+                <div class="col-md-12">
+                    <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+                        This work aims to measure a cross section of neutrino induced neutral current \(\pi^{0}\) production using the NOvA near detector. This type of interaction exchanges a \(Z\) boson and is known as neutral current (NC). A neutrino undergoing a neutral current with at least one \(\pi^{0}\) above threshold in the final state is the signal of the NC \(\pi^{0}\) production analysis. \(\pi^{0}\) decay into two gammas 99% of the time, so our signature for this analysis is two electromagnetic tracks slightly away from the vertex. NC \(\pi^{0}\) production is a very important cross section when measuring electron neutrino appearance, since the two gammas or one of them can mistakenly be reconstructed as an electron. We start by simply selecting only events with 2 showerlike tracks (called prongs). We use a preselection of fiducial, containment and number of hits cuts to start. Several variables like the width, the gap and the invariant mass of the two prongs are fed to a Boosted Decision Tree, which also contains an electromagnetic shower identifier. The latter is obtained by training a convolutional neural network, which gets to learn how to identify electrons and photons from other particles. Below you find two event displays from the NOvA near detector and descriptions on how to make sense of all the pretty colors and labels.
+                    </h4>
+                </div>
+
+                <img id="novaopsim_fig_1" src="assets/img/researchPlots/nova-pion-zero/pion-zero-evt1.png" style="max-width:850px;width:80vw;" />
+                <div class="col-md-8 col-md-offset-2"><br><br></div>
+                <img id="novaopsim_fig_1" src="assets/img/researchPlots/nova-pion-zero/pion-zero-evt2.png" style="max-width:850px;width:80vw;" />
+                <div class="col-md-8 col-md-offset-2"><br><br></div>
+
+                <div class="col-md-12">
+                    <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+                        The z-axis represents the beam direction and the two views within the same event display correspond to the top and side view of the detector. Only the small colored rectangles are the particle's energy deposits that translate into scintillation light within the NOvA cells. The amount of light collected is proportional to the energy deposited in each cell and the ADC scale at the bottom will help you map the different colors of the rectangles with different ADC counts. In particular, the redder the color, the higher the energy deposited and the bluer the smaller. In addition to the colored rectangles, you see the truth information for all particles in the event. All particles involved in each event have dotted lines associated with the direction of their trajectories. Both neutrinos are in blue and the true \(\pi^{0}\) is in orange. The star highlights the true position of the vertex, whereas the cross stands for the reconstructed vertex. The lighter blue and pink dotted lines represent the direction of the two reconstructed tracks, which in this case coincide with the two gammas.
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End NOVA Pion-Zero Cross-Section Measurement -->
+
+    <!-- NOVA Neutron-Antineutron Oscillation -->
+    <section class="for-full-back color-dark" id="novaopsim">
+        <div class="container">
+            <div class="row text-center">
+
+                <div class="col-md-12">
+                    <h1 style="font-weight:bold;">NOvA Neutron-Antineutron Oscillation</h1>
+                </div>
+                </br>
+                </br>
+                </br>
+
+                <div class="col-md-12">
+                    <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+                        Employing GEANT4, we simulated a benchtop setup, shown in <a href="#novaopsim_fig_1">Fig. 1</a>, which measures the NO\(\nu\)A cell light yield using both PMTs and APDs. The measured results are used to constrain the simulation where details on the photon generation and propagation inside the NO\(\nu\)A cell are extracted.
+                    </h4>
+                </div>
+
+                <img id="novaopsim_fig_1" src="assets/img/researchPlots/nova_opsim/GEDC0208_copy.JPG" style="max-width:850px;width:80vw;" />
+
+                <div class="col-md-8 col-md-offset-2">
+                    </br>
+                    </br>
+                    <p align="justify" style="padding-left:50px; padding-right:50px; ">Figure 1: A dark box was constructed as a housing for the setup. A plane of seven 1.1\(~\)m NO\(\nu\)A cells was placed in the bottom container. This was filled with liquid scintillator to make sure the cells were fully immersed.</p>
+                </div>
+
+                <img id="novaopsim_fig_2" src="assets/img/researchPlots/nova_opsim/compositeOutput.png" style="max-width:850px;width:80vw;" />
+
+                <div class="col-md-8 col-md-offset-2">
+                    </br>
+                    </br>
+                    <p align="justify" style="padding-left:50px; padding-right:50px; ">Figure 2: Number of photoelectrons dependencies on various hardware configurations from simulation. (a) Position of the fiber. The zero point and the maximum of the x-axis correspond to the cell center and PVC wall, respectively. (b) Scaling factor applied to the nominal PVC reflectivity. (c) Scintillator light yield. (d) Scaling factor applied to the nominal absorption length. (e) Fiber radius. (f) Fiber length.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End NOVA Neutron-Antineutron Oscillation -->
+
     <!-- NOVA Sim Section -->
     <section class="for-full-back color-white " id="novaopsim">
         <div class="container">
