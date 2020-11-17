@@ -97,12 +97,14 @@
         <ul class="nav navbar-nav">
           <li id="navbar-nav-item-home"><a href="index.html" style="font-weight:bold;">Home</a>
           </li>
-          <li id="navbar-nav-item-minos-rnd"><a href="#minos-rnd" style="font-weight:bold;">MINOS</a>
+          <!-- <li id="navbar-nav-item-minos-rnd"><a href="#minos-rnd" style="font-weight:bold;">MINOS</a>
+          </li> -->
+          <li id="navbar-nav-item-pet"><a href="#utkl-pet" style="font-weight:bold;">PET</a>
           </li>
-          <li id="navbar-nav-item-sipm"><a href="#sipm" style="font-weight:bold;">SiPM FEB</a>
+          <li id="navbar-nav-item-sipm"><a href="#sipm" style="font-weight:bold;">SiPM</a>
           </li>
-          <li id="navbar-nav-item-muon-telescope"><a href="#muon-telescope" style="font-weight:bold;">\(\mu\)-Telescope</a>
-          </li>
+          <!-- <li id="navbar-nav-item-muon-telescope"><a href="#muon-telescope" style="font-weight:bold;">\(\mu\)-Telescope</a>
+          </li> -->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -112,7 +114,7 @@
   <!--End Navigation -->
 
 
-  <!-- MINOS RnD Section -->
+  <!-- MINOS RnD Section 
   <section class="for-full-back color-white" id="minos-rnd">
     <div class="container">
       <div class="row text-center">
@@ -135,7 +137,89 @@
       </div>
     </div>
   </section>
-  <!--End MINOS RnD Section -->
+  End MINOS RnD Section -->
+
+  <!-- Muon Telescope Section -->
+  <section class="for-full-back color-white " id="utkl-pet">
+    <div class="container">
+      <div class="row text-center">
+
+        <div class="col-md-12">
+          <h1 style="font-weight:bold;">Medical Imaging and Detector R&amp;D</h1>
+        </div>
+        </br>
+        </br>
+        </br>
+        </br>
+        </br>
+
+        <div class="col-md-12">
+          <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+            Our group is involved in the research and development of novel medical imaging devices, particularly Positron Emission Tomography (PET) scanners. As a member of the TOF-PET for Proton Therapy (TPPT) collaboration, we are assisting in the construction of a prototype PET scanner for use in proton therapy at MD Anderson Cancer Center. Additionally, we are developing simulations and empirically testing various new PET scanner geometries that may provide significantly improved sensitivity relative to current clinical PET scanners.
+          </h4>
+        </div>
+
+        <div class="col-md-12">
+          <h2 align="justify" style="padding-left:50px; padding-right:50px; ">
+            About Positron Emission Tomography (PET)
+          </h2>
+        </div>
+
+        <div class="col-md-12">
+          <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+            Positron emission tomography (PET) is a powerful, noninvasive tool for molecular imaging of metabolic processes, used, e.g., for identifying tumors or brain disease. <a href="#pet-diagram">Fig. 1</a> illustrates how PET works; its labelled components are detailed below. The underlying principle of PET is the coincident detection of gamma rays (labelled ②) emitted in opposite directions from positron annihilation, which occurs at site ① after a tracer molecule injected into the bloodstream of a patient undergoes decay. A PET scanner itself consists of rings of scintillator crystals ③ coupled to photodetectors ④. The gamma rays interact in the crystals to produce showers of optical photons, and these photons trigger an electric signal when they strike the photodetectors. A coincidence event occurs when two photodetectors trigger at almost exactly the same time, indicating that an annihilation occurred along the line connecting the photodetectors. Modern scanners use time-of-flight (TOF) corrections to localize the annihilation site along this line. That is, if one photodetector triggers a time before the other, the annihilation site should be a distance closer to the first photodetector than the second, with the speed of light. However, there is variance in the difference between the time at which a gamma ray enters a crystal and the time at which this gamma ray causes a trigger, largely because this difference depends on the depth at which the gamma ray interacts in the crystal, called the DOI. Therefore, there is uncertainty in the position of the annihilation site. Within a certain degree of confidence, one can only restrict the annihilation site to a line segment ⑤.
+          </h4>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2">
+          <img id="pet-diagram" src="assets/img/researchPlots/utkl-pet/PETDiagram.png" style="max-width:450px;width:80vw;" />
+          </br>
+          </br>
+          <p align="center" style="padding-left:50px; padding-right:50px; ">Figure 1: Schematic diagram of a PET scanner.</p>
+        </div>
+
+        <div class="col-md-12">
+          <h2 align="justify" style="padding-left:50px; padding-right:50px;">
+            TOF-PET for Proton Therapy (TPPT)
+          </h2>
+        </div>
+
+        <div class="col-md-12">
+          <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+            Our group is a member of the In-beam Time-of-Flight (TOF) Positron Emission Tomography (PET) for proton radiation therapy (TPPT) collaboration, which has been commissioned to design and construct a prototype PET scanner with high time resolution for use in proton therapy at MD Anderson Cancer Center. The proton therapy used in cancer therapy produces short-lived positron emitting radioisotopes, such as 15 O, 13 N and 11 C, which can be detected by a PET scanner. Such detection would allow for unprecedented proton beam accuracy and, therefore, safer and more effective cancer treatment. However, the geometric constraints of the proton beam itself require such a PET scanner to have only partial solid angle coverage. To make up for this partial coverage, the scanner must have excellent time resolution. <a href="#tppt-cad">Fig. 2</a> shows the design created for the TPPT collaboration to match these criteria, which we will assist in constructing. More information about the collaboration may be found here: <a href="https://utaustinportugal.org/projects/tppt/" target="blank">https://utaustinportugal.org/projects/tppt/</a>.
+          </h4>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2">
+          <img id="tppt-cad" src="assets/img/researchPlots/utkl-pet/TPPT_CAD.png" style="max-width:650px;width:50vw;"/>
+          </br>
+          </br>
+          <p align="center" style="padding-left:50px; padding-right:50px; ">Figure 2: PET scanner design for the TPPT collaboration.</p>
+        </div>
+
+        <div class="col-md-12">
+          <h2 align="justify" style="padding-left:50px; padding-right:50px;">
+            Conceptual Designs
+          </h2>
+        </div>
+
+        <div class="col-md-12">
+          <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+            In addition to contributing to the TPPT collaboration, our group is investigating innovative geometries and data collection techniques that could usher forth a new generation of high-sensitivity PET scanners. For example, <a href="#nih-cad">Fig. 3</a> shows one PET scanner design that we have developed, which would allow for unprecedented solid-angle coverage and time resolution, thus yielding an overall sensitivity far surpassing current state-of-the-art scanners. This design (and others that we are studying) would employ the technique of double-ended scintillator crystal readout. With this technique, the depth of gamma interaction (DOI) can be estimated for every event, allowing for corrections to the measured trigger time and therefore vastly improved time resolution. This DOI estimation also allows for the minimization of parallax error, resulting in improved spatial resolution. We are currently investigating this technique and the overall design of Fig. 3 through simulation and benchtop studies, along with other conceptual designs. We hope to begin empirical tests at a larger scale in the near future.
+          </h4>
+        </div>
+
+        <div class="col-md-8 col-md-offset-2">
+          <img id="nih-cad" src="assets/img/researchPlots/utkl-pet/NIH_CAD.png" style="max-width:650px;width:50vw;"/>
+          </br>
+          </br>
+          <p align="center" style="padding-left:50px; padding-right:50px; ">Figure 3: Conceptual design for an ultra-high sensitivity PET scanner.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Muon Telescope Section -->
 
   <!-- SiPM RnD Section -->
   <section class="for-full-back color-dark" id="sipm">
@@ -161,7 +245,7 @@
   </section>
   <!--End SiPM RnD Section -->
 
-  <!-- Muon Telescope Section -->
+  <!-- Muon Telescope Section
   <section class="for-full-back color-white " id="muon-telescope">
     <div class="container">
       <div class="row text-center">
@@ -190,7 +274,7 @@
       </div>
     </div>
   </section>
-  <!-- End Muon Telescope Section -->
+  End Muon Telescope Section -->
 
   <!--footer Section -->
   <div class="for-full-back" id="footer" style="padding-bottom:10px;">
