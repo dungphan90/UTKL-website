@@ -106,7 +106,7 @@
       <!-- Collect the nav links for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li id="navbar-nav-item-home"><a href="index.html"><i class="fa fa-home" style="position:relative;font-size:130%;bottom:5px;width:80px;text-align:left;"></i></a>
+          <li id="navbar-nav-item-home"><a href="index.html" style="font-weight:bold;">Home</a>
           </li>
           <li id="navbar-nav-item-nemo_intro"><a href="#nemo_intro" style="font-weight:bold;">Intro</a>
           </li>
@@ -114,8 +114,8 @@
           </li>
           <li id="navbar-nav-item-supernemo"><a href="#supernemo" style="font-weight:bold;">SuperNEMO</a>
           </li>
-          <li id="navbar-nav-item-publication"><a href="#publication" style="font-weight:bold;">Publications</a>
-          </li>
+          <!--         <li id="navbar-nav-item-publication"><a href="#publication" style="font-weight:bold;">Publications</a>
+          </li> -->
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -223,6 +223,64 @@
               </ul>
             </h4>
           </div>
+
+          <h2 style="font-weight:bold;">Radioactive Source Deployment System</h2>
+          </br>
+          </br>
+
+           <div class="col-md-12">
+            <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+              The radioactive source deployment system consists of six oxygen-free copper plumb bobs suspended from stainless steel wires inside the SuperNEMO source frame. Each wire is wrapped around a wheel on top of the detector (housed inside a stainless steel vessel) which may be rotated by a stepper motor, lowering and raising each plumb bob. At seven fixed positions on each wire above the plumb bobs, 207Bi calibration sources are attached, making it possible to introduce the sources into the detector. At the bottom of the source frame there are six nests with laser light passing through them. Each plumb bob has a hole big enough for the laser beam to pass through. As a plumb bob enters a nest, it first interrupts the laser; this interruption is detected by a computer which slows down the motor. As the plumb bob continues descending, it reaches a position where its hole aligns with the laser beam. The computer is once again alerted by this change, and it stops the motor completely.
+            </h4>
+          </div>
+
+          <img id="source_deployment" src="assets/img/researchPlots/nemo/source_deployment.png" style="max-height:400px;"/>
+           <div class="col-md-12">
+            <h5 align="center" style="padding-left:50px; padding-right:50px;"> Left: The six different calibration lines installed on top of the SuperNEMO source frame. Right: A close up of one of the vessels which houses the wheels which raise and lower the plumb bobs and calibration sources. </h5>
+           </div>
+           
+           <div class="col-md-12">
+            <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+           The system is fully automated. Photodiode amplifiers are used to create electrical signals whenever they receive light from the lasers. These signals are the way the computer knows when the lasers are interrupted and uninterrupted. The computer which controls the whole system, called CompactRIO, communicates with the stepper motor drivers which actuate the stepper motors that deploy the plumb bobs. The CompactRIO has 64 inputs/outputs, and it uses LabVIEW as the language that interprets and analyzes the inputs to decide which outputs need
+to be sent.
+            </h4>
+          </div>
+
+          <img id="laser_source_positioning" src="assets/img/researchPlots/nemo/laser_source_positioning.png" style="max-height:400px;"/>
+           <div class="col-md-12">
+            <h5 align="center" style="padding-left:50px; padding-right:50px;"> Computer drawings showing how a plumb bob interacts with the light passing through a bottom nest in order to find its lowest position.</h5>
+           </div>
+
+           <div class="col-md-12">
+            <h4 align="justify" style="padding-left:50px; padding-right:50px; ">
+The radioactive source deployment system has already been installed and incorporated into the SuperNEMO detector. The mechanics of it (introduction and retrieval of the calibration sources) have already been successfully tested, and it will begin performing calibration runs some time in the year 2021.
+            </h4>
+          </div>
+
+          <img id="vessel_mount" src="assets/img/researchPlots/nemo/vessel_mount.png" style="max-height:500px;"/>
+           <div class="col-md-12">
+            <h5 align="center" style="padding-left:50px; padding-right:50px;"> Vessels mounted on top of the SuperNEMO detector.</h5>
+           </div>
+            
+           <h5 style="color:white"><div style="width:100px;height:50px;"></div></h5>
+
+          <h2 style="font-weight:bold;">Light Injection and Monitoring System</h2>
+          </br>
+          </br>
+
+           <div class="col-md-12">
+             <h4 align="justify" style="padding-left:50px; padding-right:50px; ">The Light Injection and Monitoring (LIM) System injects pulsed UV light into each optical module of the SuperNEMO calorimeter via optical fibers to control and monitor their energy response over time. The aim of the LIM system is to guarantee the stability of the calorimetric response to within 1%. The LIM system consists of 20 UV-LEDs illuminating ~1500 optical fibers routed to optical modules. Each LED illuminates a bundle of ~75 fibers. Reference optical modules outside the detector are used to monitor the energy of 207 Bi sources as well as the light levels of some optical fibers connected to each of the 20 UV-LEDs. By comparing the light from the UV-LEDs to the constant energy</h4>
+          </div>
+
+           <div class="col-md-12">
+             <h4 align="justify" style="padding-left:50px; padding-right:50px; ">By comparing the light from the UV-LEDs to the constant energy of the 207 Bi sources, it is possible to correct any fluctuations on the UV-LEDs. After making those corrections, that light can be used to see if the energy response of the SuperNEMO optical modules is drifting over time. Tests with a top-bench version of this system at UT Austin outperformed the 1% stability goal. The system has been installed and run successfully at the site of the SuperNEMO detector. It will also begin performing calibration runs some time in the year 2021.</div>
+
+          <img id="LI-schematic" src="assets/img/researchPlots/nemo/LI_schematic.png" style="max-height:600px;"/>
+           <div class="col-md-12">
+            <h5 align="center" style="padding-left:50px; padding-right:50px;">Schematic of the Light Injection and Monitoring System together with actual photos of the system as it is currently installed.</h5>
+           </div>
+           
+            <h5 style="color:white"><div style="width:100px;height:50px;"></div></h5>
 
         </div>
       </div>
